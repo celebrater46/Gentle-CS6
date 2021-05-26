@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gentle_CS6"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Gentle-CS6" Height="250" Width="800">
     <Grid>
-        <TextBlock FontSize="64">Hello World!!</TextBlock>
+        <!-- <TextBlock FontSize="32">Hello World.</TextBlock> -->
+        <Viewbox HorizontalAlignment="Center" Height="100" Width="500">
+            <!-- <TextBlock FontSize="32">This is Viewbox.</TextBlock> -->
+            <TextBlock FontSize="100">00:00:00</TextBlock>
+        </Viewbox>
     </Grid>
 </Window>

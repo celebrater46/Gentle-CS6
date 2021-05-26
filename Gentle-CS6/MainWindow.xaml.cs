@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Gentle_CS6
 {
@@ -20,9 +21,30 @@ namespace Gentle_CS6
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DispatcherTimer timer;
         public MainWindow()
         {
             InitializeComponent();
+            // Console.WriteLine("Hello World.");
         }
+
+        private DispatcherTimer CreateTimer()
+        {
+            var t = new DispatcherTimer(DispatcherPriority.SystemIdle);
+            t.Interval = TimeSpan.FromMilliseconds(300);
+            t.Tick += (sender, e) =>
+            {
+                // process when the Timer created
+                // apply current time to the text
+                textBlock.Text = DateTime.Now.ToString("hh:mm:ss t z");
+            };
+            
+            return t;
+        }
+
+        // public static void Main()
+        // {
+        //     Console.WriteLine("Hello World at MainWindow.");
+        // }
     }
 }
