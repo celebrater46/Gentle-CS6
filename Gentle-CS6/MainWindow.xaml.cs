@@ -26,6 +26,7 @@ namespace Gentle_CS6
         {
             InitializeComponent();
             // Console.WriteLine("Hello World.");
+            timer = CreateTimer();
         }
 
         private DispatcherTimer CreateTimer()
@@ -36,10 +37,15 @@ namespace Gentle_CS6
             {
                 // process when the Timer created
                 // apply current time to the text
-                textBlock.Text = DateTime.Now.ToString("hh:mm:ss");
+                TextBlock.Text = DateTime.Now.ToString("hh:mm:ss");
             };
             
             return t;
+        }
+
+        private void textBlockMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            timer.Start();
         }
 
         // public static void Main()

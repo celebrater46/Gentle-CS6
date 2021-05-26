@@ -8,9 +8,9 @@
         Title="Gentle-CS6" Height="250" Width="800">
     <Grid>
         <!-- <TextBlock FontSize="32">Hello World.</TextBlock> -->
-        <Viewbox HorizontalAlignment="Center" Height="100" Width="500">
+        <Viewbox HorizontalAlignment="Center">
             <!-- <TextBlock FontSize="32">This is Viewbox.</TextBlock> -->
-            <TextBlock FontSize="100" x:Name="textBlock" Text="00:00:00" />
+            <TextBlock FontSize="100" x:Name="TextBlock" Text="00:00:00" MouseDown="textBlockMouseDown" />
         </Viewbox>
     </Grid>
 </Window>
