@@ -36,7 +36,7 @@ namespace Gentle_CS6
             {
                 // process when the Timer created
                 // apply current time to the text
-                textBlock.Text = DateTime.Now.ToString("hh:mm:ss t z");
+                textBlock.Text = DateTime.Now.ToString("hh:mm:ss");
             };
             
             return t;
